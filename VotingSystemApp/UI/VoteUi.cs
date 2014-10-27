@@ -17,11 +17,10 @@ namespace VotingSystemApp
         public VoteUi()
         {
             InitializeComponent();
-            ShowCandidatesSymbolInComboBox();
-
+            
         }
         CandidateEntryBLL aCandidateEntryBll = new CandidateEntryBLL();
-        private VoterBLL aVoterBll;
+        private VoterBLL aVoterBll = new VoterBLL();
         private Voter aVoter;
 
         public void ShowCandidatesSymbolInComboBox()
@@ -38,18 +37,20 @@ namespace VotingSystemApp
 
         private void castButton_Click(object sender, EventArgs e)
         {
-             aVoter = new Voter();
+            aVoter = new Voter();
             aVoter.Email = votersEmailAddressTextBox.Text;
-            aVoterBll = new VoterBLL();
-             string msg = aVoterBll.CheckThisEmailValid()
+            Candidate aCandidate = (Candidate)selectSymbolOfCandidateComboBox.SelectedItem;
+            aVoter.CandidateId = aCandidate.CandidateID;
+            string msg = aVoterBll.Vote(aVoter);
             MessageBox.Show(msg);
-            
+
 
         }
 
-        public string CheckThisEmailValid(string mail)
+        private void VoteUi_Load(object sender, EventArgs e)
         {
-            return aVoterBll.CheckThisEmailValid(mail);
+            ShowCandidatesSymbolInComboBox();
         }
+        
     }
 }

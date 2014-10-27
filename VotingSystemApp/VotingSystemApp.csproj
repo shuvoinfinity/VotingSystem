@@ -50,6 +50,7 @@
     <Compile Include="BLL\CandidateEntryBLL.cs" />
     <Compile Include="DLL\DAO\Voter.cs" />
     <Compile Include="DLL\Gateway\CandidateGateway.cs" />
+    <Compile Include="DLL\Gateway\Gateway.cs" />
     <Compile Include="DLL\Gateway\VoterGateway.cs" />
     <Compile Include="UI\CandidateEntryUi.cs">
       <SubType>Form</SubType>

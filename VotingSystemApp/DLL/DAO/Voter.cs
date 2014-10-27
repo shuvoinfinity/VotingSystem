@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace VotingSystemApp.DLL.DAO
 {
-    class Voter
+    public class Voter
     {
         public int ID { get; set; }
         public string Email { get; set; }
+        public int CandidateId { get; set; }
 
         public Voter(int id, string email):this()
         {

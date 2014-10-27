@@ -60,5 +60,27 @@ namespace VotingSystemApp.DLL.Gateway
             connection.Close();
             return candidates;
         }
+
+        public bool HasthisName(string name)
+        {
+            connection.Open();
+            string query = string.Format("SELECT * FROM t_Candidate WHERE Name = '{0}'", name);
+            SqlCommand aSqlCommand = new SqlCommand(query, connection);
+            SqlDataReader aReader = aSqlCommand.ExecuteReader();
+            bool Hasrow = aReader.HasRows;
+            connection.Close();
+            return Hasrow;
+        }
+
+        public bool HasThisSymbol(string symbol)
+        {
+            connection.Open();
+            string query = string.Format("SELECT * FROM t_Candidate WHERE Symbol = '{0}'", symbol);
+            SqlCommand aSqlCommand = new SqlCommand(query, connection);
+            SqlDataReader aReader = aSqlCommand.ExecuteReader();
+            bool Hasrow = aReader.HasRows;
+            connection.Close();
+            return Hasrow;
+        }
     }
 }

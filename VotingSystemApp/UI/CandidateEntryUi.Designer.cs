@@ -100,6 +100,7 @@
             this.Controls.Add(this.saveButton);
             this.Name = "CandidateEntryUi";
             this.Text = "CandidateEntryUi";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

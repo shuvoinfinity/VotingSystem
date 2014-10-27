@@ -22,3 +22,15 @@ C:\Users\PC21\Desktop\VotingSystem-master\VotingSystem-master\VotingSystemApp\ob
 C:\Users\PC21\Desktop\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.csproj.GenerateResource.Cache
 C:\Users\PC21\Desktop\VotingSystem-master\VotingSystem-master\VotingSystemApp\bin\Debug\VotingSystemApp.exe
 C:\Users\PC21\Desktop\VotingSystem-master\VotingSystem-master\VotingSystemApp\bin\Debug\VotingSystemApp.pdb
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\bin\Debug\VotingSystemApp.exe.config
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.exe
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.pdb
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.csprojResolveAssemblyReference.cache
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.CandidateEntryUi.resources
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.MainUi.resources
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.Properties.Resources.resources
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.VoteUi.resources
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.WinnerUi.resources
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\obj\Debug\VotingSystemApp.csproj.GenerateResource.Cache
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\bin\Debug\VotingSystemApp.exe
+G:\OOP-C#\UndonePractices\VotingSystem-master\VotingSystem-master\VotingSystem-master\VotingSystemApp\bin\Debug\VotingSystemApp.pdb

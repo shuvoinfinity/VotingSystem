@@ -16,14 +16,16 @@ namespace VotingSystemApp
         {
             InitializeComponent();
         }
-
+        CandidateEntryBLL aCandidateEntryBLL = new CandidateEntryBLL();
         private void saveButton_Click(object sender, EventArgs e)
         {
             Candidate aCandidate=new Candidate(candidateNameTextBox.Text,symbolTextBox.Text);
-            CandidateEntryBLL aCandidateEntryBLL=new CandidateEntryBLL();
+            
             string msg = aCandidateEntryBLL.Save(aCandidate);
             MessageBox.Show(msg);
 
+            candidateNameTextBox.Text = String.Empty;
+            symbolTextBox.Text = String.Empty;
         }
-    }
+   }
 }

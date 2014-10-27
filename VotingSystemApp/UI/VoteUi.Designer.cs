@@ -101,6 +101,7 @@
             this.Controls.Add(this.selectSymbolOfCandidateComboBox);
             this.Name = "VoteUi";
             this.Text = "VoteUi";
+            this.Load += new System.EventHandler(this.VoteUi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

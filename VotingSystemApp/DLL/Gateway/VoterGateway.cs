@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,21 +11,37 @@ namespace VotingSystemApp.DLL.Gateway
 {
     class VoterGateway
     {
-        Voter aVoter=new Voter();
+
 
         private SqlConnection connection;
-        public bool HasThisMail(string mail)
+
+        public VoterGateway()
+        {
+            connection = new SqlConnection();
+            connection.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
+        }
+
+        public bool HasThisMail(string email)
         {
             connection.Open();
-            string query = string.Format("SELECT * FROM t_voter WHERE Email='{0}'", aVoter.Email);
-            SqlCommand aCommand = new SqlCommand(query, connection);
-            SqlDataReader aReader = aCommand.ExecuteReader();
+            string query = string.Format("SELECT * FROM t_voter WHERE Email='{0}'", email);
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader aReader = command.ExecuteReader();
+            bool Hasrow = aReader.HasRows;
+            connection.Close();
+            return Hasrow;
+        }
 
-            if (aReader.HasRows)
-            {
-                return true;
-            }
-            return false;
+        public string Vote(Voter aVoter)
+        {
+            connection.Open();
+            string query = string.Format("INSERT INTO t_Elect VALUES ('{0}','{1}')", aVoter.CandidateId, aVoter.ID);
+            SqlCommand command = new SqlCommand(query, connection);
+            int affectedRow = command.ExecuteNonQuery();
+            connection.Close();
+            if (affectedRow > 0)
+                return "You have Voted";
+            return "Error";
         }
     }
 }

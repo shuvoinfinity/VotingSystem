@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VotingSystemApp.DLL.DAO;
 using VotingSystemApp.DLL.Gateway;
 
 namespace VotingSystemApp.BLL
@@ -12,18 +13,19 @@ namespace VotingSystemApp.BLL
     {
       VoterGateway aVoterGateway=new VoterGateway();
 
-       public string CheckThisEmailValid(string mail)
+
+       public string Vote(Voter aVoter)
        {
-           if (!HasThisMail(mail))
+           if (!HisThisEmail(aVoter.Email))
            {
-               return "mail already exists";
+               return "This Email is not recorded.";
            }
-           return " ";
+           return aVoterGateway.Vote(aVoter);
        }
 
-       public bool HasThisMail(string mail)
+       private bool HisThisEmail(string email)
        {
-           return aVoterGateway.HasThisMail(mail);
+           return aVoterGateway.HasThisMail(email);
        }
     }
 }
